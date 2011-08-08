@@ -1,4 +1,12 @@
 RPGmaster::Application.routes.draw do
+  
+  resources :items
+
+  match '/about' => "pages#about"
+  match '/help' => "pages#help"
+  
+  root :to => "pages#home"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
