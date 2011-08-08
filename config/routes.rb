@@ -1,4 +1,11 @@
 RPGmaster::Application.routes.draw do
+  
+  resources :items
+
+  resources :item_types, :except => [:show]
+
+  root :to => 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
